@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Chess App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginWindow" class="window active">
+    <div class="window-title">Login - Chess</div>
+    <div class="window-content">
+      <input id="loginUsername" type="text" placeholder="Username">
+      <input id="loginPassword" type="password" placeholder="Password">
+      <button id="loginBtn">Login</button>
+      <div id="loginError" class="error"></div>
+    </div>
+  </div>
+  <div id="mainWindow" class="window" style="display:none;">
+    <div class="window-title">Chess Game</div>
+    <div class="window-content main-flex">
+      <div class="chess-section">
+        <div id="chessboard"></div>
+        <div id="gameStatus"></div>
+      </div>
+      <div class="chat-section">
+        <div id="chatHeader">Chat & Emoji</div>
+        <div id="messages"></div>
+        <div class="chat-input">
+          <input id="messageInput" type="text" placeholder="Type a message...">
+          <button id="sendBtn">Send</button>
+          <button id="emojiBtn">😊</button>
+        </div>
+        <div id="emojiPicker" class="emoji-picker" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
